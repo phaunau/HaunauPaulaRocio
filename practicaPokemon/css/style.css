@@ -1,0 +1,93 @@
+body {
+    font-family: Courier, monospace;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    background-color: blueviolet;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 120px;
+    font-size: 1rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+.resultados {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: cornflowerblue;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pokemon img {
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.resultados img {
+
+    border-radius: 8px;
+    box-shadow: 0 0 8px #000;
+}
+
+.ganador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: white;
+}

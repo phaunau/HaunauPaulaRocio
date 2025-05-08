@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica Fetch Api</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <br />
+    <div class="main-container">
+        <br />
+        <h1>Pelea épica de Pokémon</h1>
+        <p class="subtitulo">
+        <h4>Ingrese un número del 1 al 1300</h4>
+        <br />
+        <input id="pokemon1" type="number" min="1" max="1500" />
+        <input id="pokemon2" type="number" min="1" max="1500" />
+        </p>
+        <button id="batalla1" onclick="Get_StatsPersonaje()">Batalla</button>
+
+        <div id="resultado" class="resultados" style="display: none;" width="500">
+            <div class="pokemon">
+                <img id="img_pok1" alt="Imagen Pokémon 1" style="display: none;" width="200" />
+                <p><label id="ataquepok1"></label></p>
+                <img id="img_pok2" alt="Imagen Pokémon 2" style="display: none;" width="200" />
+                <p><label id="ataquepok2"></label></p>
+            </div>
+        </div>
+
+        <div class="ganador">
+            <img id="img_pok3" alt="Imagen Pokémon Ganador" width="300" style="display:none" />
+        </div>
+
+        <br />
+        <label id="ganador"></label>
+    </div>
+
+    <script src="/practicaPokemon/fn/fn.js"></script>
+</body>
+
+</html>
