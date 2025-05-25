@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica Fetch Api</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <br />
+    <div class="main-container">
+        <br />
+        <h1>Pelea épica de Pokémon</h1>
+        <p class="subtitulo">
+        <h4>Presione "Batalla" para generar dos equipos aleatorios</h4>
+        <button id="Randomizador">Batalla</button>
+
+        <div id="equipos" style="display: flex; gap: 40px; justify-content: center;">
+            <div id="equipoA" class="equipo"></div>
+            <div id="equipoB" class="equipo"></div>
+        </div>
+
+
+        <h2 id="labelGanador"></h2>
+
+        <div id="ganador" style="display: flex; gap: 20px"></div>
+
+    </div>
+
+    <script src="/equipopokemon/js/equipopokemon.js"></script>
+</body>
+
+</html>
