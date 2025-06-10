@@ -2,8 +2,7 @@ let tiradasA = [];
 let tiradasB = [];
 function verificarTiradas() {
     if (tiradasA.length < 3 || tiradasB.length < 3) {
-
-        return
+        return;
     }
     if (tiradasA.length >= 3 && tiradasB.length >= 3) {
         document.getElementById('Randomizador').disabled = false;
@@ -21,12 +20,21 @@ function verificarTiradas() {
             mayorB = tiradasB[i]
         }
     }
+
+    let mayorEquipo = '';
+    if (mayorA > mayorB) {
+        mayorEquipo = `el equipo A con ${mayorA}`
+    } else { mayorEquipo = `el equipo B con ${mayorB}` }
+    console.log(mayorEquipo)
+
     const resultadoA = document.createElement('p')
-    const resultadoB = document.createElement('p')
     resultadoA.textContent = `La mejor tirada ${mayorA}`;
     document.getElementById('dadoACards').appendChild(resultadoA);
+    const resultadoB = document.createElement('p')
     resultadoB.textContent = `La mejor tirada ${mayorB}`;
     document.getElementById('dadoBCards').appendChild(resultadoB);
+
+    return mayorEquipo;
 }
 
 document.getElementById('DadosA').addEventListener('click', async function () {
@@ -138,7 +146,11 @@ async function mostrarEquipo(nombres, contenedorID) {
     return { ataqueTotal, defensaTotal }
 }
 
+
 async function peleaEquipos(equipo1Stats, equipo2Stats, idA, idB) {
+
+    const texto = verificarTiradas()
+
     const ComparaUno = equipo1Stats.defensaTotal - equipo2Stats.ataqueTotal
     const ComparaDos = equipo2Stats.defensaTotal - equipo1Stats.ataqueTotal
 
@@ -151,10 +163,10 @@ async function peleaEquipos(equipo1Stats, equipo2Stats, idA, idB) {
         textoGanador = '¡El equipo ganador es el B!'
         document.getElementById(idB).classList.add('ganador')
     } else {
-        textoGanador = '¡Empate!'
+        textoGanador = `¡Empate! El ganador del empate es ${texto}`
     }
-
     document.getElementById('labelGanador').textContent = textoGanador
+    document.getElementById('Randomizador').disabled = true;
 }
 
 
