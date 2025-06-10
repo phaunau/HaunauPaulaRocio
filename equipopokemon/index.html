@@ -1,32 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practica Fetch Api</title>
+    <title>Batalla Pokémon</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <br />
     <div class="main-container">
-        <br />
-        <h1>Pelea épica de Pokémon</h1>
-        <p class="subtitulo">
-        <h4>Presione "Batalla" para generar dos equipos aleatorios</h4>
-        <button id="Randomizador">Batalla</button>
-
-        <div id="equipos" style="display: flex; gap: 40px; justify-content: center;">
-            <div id="equipoA" class="equipo"></div>
-            <div id="equipoB" class="equipo"></div>
+        <h1>Pelea épica de equipos Pokémon</h1>
+        <h4>Tirar los dados tres veces para poder iniciar la batalla</h4>
+        <div id="dados" class="dices-container">
+            <div id="dadoA" class="dice-container">
+                <h3>Tirar los dados A</h3>
+                <button id="DadosA">Tirar</button>
+                <div class="dado" id="dadoACards"></div>
+            </div>
+            <div id="dadoB" class="dice-container">
+                <h3>Tirar los dados B</h3>
+                <button id="DadosB">Tirar</button>
+                <div class="dado" id="dadoBCards"></div>
+            </div>
         </div>
 
+        <h1 id="labelGanador"></h1>
 
-        <h2 id="labelGanador"></h2>
-
-        <div id="ganador" style="display: flex; gap: 20px"></div>
-
+        <div id="equipos" class="equipos-container">
+            <h4>Presiona "Iniciar Batalla" para generar dos equipos aleatorios</h4>
+            <div id="equipoA" class="equipo-container">
+                <h3>Equipo A</h3>
+                <div class="equipo" id="equipoACards"></div>
+            </div>
+            <div id="equipoB" class="equipo-container">
+                <h3>Equipo B</h3>
+                <div class="equipo" id="equipoBCards"></div>
+            </div>
+        </div>
+        <button disabled id="Randomizador">Iniciar batalla</button>
     </div>
 
     <script src="/equipopokemon/js/equipopokemon.js"></script>
