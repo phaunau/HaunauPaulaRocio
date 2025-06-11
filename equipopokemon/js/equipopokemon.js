@@ -1,5 +1,6 @@
 let tiradasA = [];
 let tiradasB = [];
+let resultadosMostrados = false;
 function verificarTiradas() {
     if (tiradasA.length < 3 || tiradasB.length < 3) {
         return;
@@ -34,6 +35,7 @@ function verificarTiradas() {
     resultadoB.textContent = `La mejor tirada ${mayorB}`;
     document.getElementById('dadoBCards').appendChild(resultadoB);
 
+    resultadosMostrados = true;
     return mayorEquipo;
 }
 
